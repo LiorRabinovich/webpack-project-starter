@@ -1,0 +1,30 @@
+@import "reset";
+@import "fonts";
+
+body {
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+li {
+    display: inline-block;
+    margin-right: 5px;
+    &:last-child {
+        margin-right: 0;
+        background: url('images/animals-icons/dog.png');
+    }
+    >div {
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
