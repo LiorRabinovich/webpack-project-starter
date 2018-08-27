@@ -32,8 +32,8 @@ module.exports = {
         use: [{
           loader: 'url-loader',
           options: {
-            limit: 8000, // Convert images < 8kb to base64 strings
-
+            limit: 10240, // Images larger than 10 KB won’t be base64 strings
+            outputPath: 'images/'
           }
         }]
       },
@@ -44,6 +44,16 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'fonts/'
+          }
+        }]
+      },
+      {
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'sounds/'
           }
         }]
       }

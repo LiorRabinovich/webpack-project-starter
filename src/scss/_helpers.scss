@@ -1,0 +1,7 @@
+@mixin print-background-image-list($prefix-class,$prefix-background, $list, $extension: 'png') {
+    @each $item in $list {
+        .#{$prefix-class}-#{$item} {
+            background: url("#{$prefix-background}#{$item}.#{$extension}");
+        }
+    }
+}
