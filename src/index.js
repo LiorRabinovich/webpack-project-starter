@@ -1,8 +1,9 @@
-/* Scss */
-import './scss/main.scss'
-
 /* Javascripts */
 import Main from './js/Main.js';
+import Utilities from './js/Utilities.js';
+
+/* Scss */
+import('./scss/platforms/'+Utilities.getPlatform()+'.scss');
 
 class Index {
     constructor() {

@@ -14,6 +14,12 @@ h2 {
     font-size: 1.2em;
 }
 
+.platform {
+    width: 100px;
+    height: 20px;
+    display: inline-block;
+}
+
 li {
     display: inline-block;
     margin-right: 5px;
@@ -27,6 +33,6 @@ li {
     }
     $animals-icons: dog duck fish giraffe lion tiger;
     $social-media-icons: blogger facebook google linkedin twitter;
-    @include print-background-image-list('animals-icons', '../images/animals-icons/', $animals-icons);
-    @include print-background-image-list('social-media-icons', '../images/social-media-icons/', $social-media-icons);
+    @include print-background-image-list('animals-icons', '../../images/animals-icons/', $animals-icons);
+    @include print-background-image-list('social-media-icons', '../../images/social-media-icons/', $social-media-icons);
 }

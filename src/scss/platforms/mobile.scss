@@ -1,0 +1,6 @@
+.platform {
+    &::after {
+        content: "Mobile"
+    }
+}
+@import "../main";

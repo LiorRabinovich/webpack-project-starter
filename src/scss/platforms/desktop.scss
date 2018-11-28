@@ -1,0 +1,6 @@
+.platform {
+    &::after {
+        content: "Desktop"
+    }
+}
+@import "../main";

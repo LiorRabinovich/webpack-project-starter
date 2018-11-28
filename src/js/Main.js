@@ -1,7 +1,6 @@
-import buttonSound from '../sounds/button.mp3';
 class Main {
     constructor() {
-        this.buttonSound = new Audio(buttonSound);
+        this.buttonSound = new Audio('/sounds/button.mp3');
         this.$listItems = document.getElementsByTagName('li');
 
         this.addEventsListener();
