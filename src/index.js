@@ -3,7 +3,7 @@ import Main from './js/Main.js';
 import Utilities from './js/Utilities.js';
 
 /* Scss */
-import('./scss/platforms/'+Utilities.getPlatform()+'.scss');
+import(/* webpackChunkName: "[request]" */ './scss/platforms/'+Utilities.getPlatform()+'.scss');
 
 class Index {
     constructor() {

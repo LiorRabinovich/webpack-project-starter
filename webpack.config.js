@@ -27,7 +27,7 @@ module.exports = {
         use: [
           "style-loader",
           "css-loader",
-          "sass-loader"
+          "sass-loader",
         ]
       },
       {
@@ -37,6 +37,26 @@ module.exports = {
           options: {
             limit: 10240, // Images larger than 10 KB won’t be base64 strings
             outputPath: 'images/'
+          }
+        }]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+        }]
+      },
+      {
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'sounds/'
           }
         }]
       }
@@ -54,6 +74,6 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, "./public"),
-    }]),
+    }])
   ]
 };
